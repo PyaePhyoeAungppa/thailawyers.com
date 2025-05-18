@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thailand Lawyers - Assisting foreign companies - Thai Lawyers LtdThai Lawyers Ltd | Thailand BOI Company
+        Registration, representative office, branch office, Thai company, foreign business in Thailand by English
+        speaking
+        Bangkok Lawyers.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-vlL7zkRv4k8lYX0+lmClmguqK50K+ZDhfPOcB37y+WDvD3bgKqfq7hNf3O+MZyl5I2IB7Rt3D8IKKvQ5uA5zKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/favicon-16x16.png">
+    <style>
+        /* Custom primary color */
+        :root {
+            --primary-color: #da7509;
+        }
+
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        .hover-text-primary:hover {
+            color: var(--primary-color);
+        }
+
+        /* Smooth rotation for arrow */
+        button svg {
+            transition: transform 0.3s ease;
+        }
+
+        button:focus {
+            outline-offset: 3px;
+            outline-color: var(--primary-color);
+        }
+
+        /* Services dropdown */
+        .services-dropdown {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 40;
+            transform: translateY(0);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .services-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .swiper-slide {
+            min-height: 330px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-items: center;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--primary-color);
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <!-- Sticky Navbar -->
+    <header class="sticky top-0 bg-white backdrop-blur-md bg-opacity-90 shadow-sm z-50" role="banner">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex flex-col md:flex-row items-center justify-between">
+
+            <!-- Top Row: Mobile (company name + menu icon) | Desktop (full info) -->
+            <div
+                class="w-full md:w-auto flex items-center justify-between md:justify-start space-y-0 md:space-y-0 md:space-x-8 text-gray-700 text-sm md:text-base font-semibold">
+
+                <!-- Company Name (Always Visible) -->
+                <span class="text-primary text-lg md:text-xl font-extrabold"><a href="index.html" class="">Thai Lawyers
+                        Ltd.</a></span>
+
+                <!-- Contact Info (Only on md and up) -->
+                <div class="hidden md:flex space-x-8 ml-8">
+                    <a href="mailto:Info@ThaiLawyers.com"
+                        class="hover-text-primary transition-colors">Info@ThaiLawyers.com</a>
+                    <a href="tel:+6626432403" class="hover-text-primary transition-colors">+662-643-2403</a>
+                </div>
+
+                <!-- Mobile menu toggle (Only on mobile) -->
+                <button id="menu-toggle" class="md:hidden text-gray-700 ml-auto" aria-label="Toggle Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation links -->
+            <nav id="mobile-menu" class="w-full md:w-auto mt-3 md:mt-0 hidden md:block" role="navigation"
+                aria-label="Primary Navigation">
+                <ul
+                    class="flex flex-col md:flex-row md:flex-wrap justify-center gap-2 md:gap-x-8 text-gray-800 font-medium text-sm md:text-base">
+                    <li><a href="about.html" class="hover-text-primary transition-colors block px-2 py-1">About Us</a>
+                    </li>
+                    <li><a href="contact.html" class="hover-text-primary transition-colors block px-2 py-1">Contact
+                            Us</a></li>
+                    <li><a href="services.html"
+                            class="hover-text-primary transition-colors block px-2 py-1">Services</a></li>
+                    <li><a href="blog.html" class="hover-text-primary transition-colors block px-2 py-1">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="max-full text-gray-800">
+
+        <section class="w-full bg-white py-16 px-6">
+            <div class="max-w-7xl mx-auto text-gray-800">
+
+                <!-- Search Input -->
+                <div class="max-w-5xl mx-auto mb-8">
+                    <input type="search" placeholder="Search blogs..."
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400" />
+                </div>
+
+                <!-- Categories Filter Pills -->
+                <div class="max-w-3xl mx-auto mb-12 flex flex-wrap justify-center gap-3">
+                    <button
+                        class="px-4 py-1.5 rounded-full border border-orange-500 text-orange-600 hover:bg-orange-100 transition">
+                        Doing Business in Thailand
+                    </button>
+                    <button
+                        class="px-4 py-1.5 rounded-full border border-orange-500 text-orange-600 hover:bg-orange-100 transition">
+                        Factories in Thailand
+                    </button>
+                    <button
+                        class="px-4 py-1.5 rounded-full border border-orange-500 text-orange-600 hover:bg-orange-100 transition">
+                        Foreign Business in Thailand
+                    </button>
+                    <button
+                        class="px-4 py-1.5 rounded-full border border-orange-500 text-orange-600 hover:bg-orange-100 transition">
+                        Land Ownership by Foreigners
+                    </button>
+                    <button
+                        class="px-4 py-1.5 rounded-full border border-orange-500 text-orange-600 hover:bg-orange-100 transition">
+                        Thai Limited Company
+                    </button>
+                    <button
+                        class="px-4 py-1.5 rounded-full border border-orange-500 text-orange-600 hover:bg-orange-100 transition">
+                        Thailand BOI
+                    </button>
+                    <button
+                        class="px-4 py-1.5 rounded-full border border-orange-500 text-orange-600 hover:bg-orange-100 transition">
+                        Thailand Labour Law
+                    </button>
+                    <button
+                        class="px-4 py-1.5 rounded-full border border-orange-500 text-orange-600 hover:bg-orange-100 transition">
+                        Work Permit and Visa
+                    </button>
+                </div>
+
+                <!-- Blog Articles -->
+                <div class="max-w-4xl mx-auto space-y-12">
+                    <!-- BLOG ITEM -->
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            BOI Promotion for Waste Treatment or Disposal Project
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">May 13, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            The Board of Investment of Thailand promotes the waste treatment or disposal activities. The
+                            project’s income must come from providing waste treatment or disposal services...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Thailand BOI</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            Restaurant Business in Thailand
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">May 5, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            In Thailand, a restaurant business involves cooking or baking food to serve at the location
+                            or for takeaway. Food factories with industrial machines are excluded...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Foreign Business in Thailand</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            Thailand Digital Arrival Card (TDAC)
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">April 25, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            The government introduces the Thailand Digital Arrival Card system (TDAC) starting May 1,
+                            2025. Foreign nationals must complete it online 3 days before arrival...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Work Permit and Visa</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            BOI Promotion for Biotechnology Development
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">April 17, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            The BOI promotes biotechnology with a 10-year tax exemption and other incentives. Conditions
+                            apply based on activity classification and certifications...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Thailand BOI</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            BOI Promotion for Manufacture of Biochemical
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">April 10, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            The BOI offers up to 8 years of tax exemption for biochemical manufacturers using
+                            agricultural or biomass inputs, following strict qualification rules...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Thailand BOI</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            BOI’s Thailand Investment and Expat Services Center (TIESC)
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">April 8, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            The TIESC was launched on March 31, 2025, located in One Bangkok. It offers centralized
+                            support for investors and expats engaging with BOI...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Thailand BOI</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            BOI Promotion for Manufacture of Bioplastic
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">April 2, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            The BOI supports bioplastic production projects with required certifications like ISO 16620.
+                            Tax benefits are available for fully compliant operations...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Thailand BOI</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            BOI Promotion for Biotechnology
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">March 24, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            The biotechnology industry is supported by the BOI with multiple incentives. Eligible
+                            activities include R&D and bio-based manufacturing under set conditions...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Thailand BOI</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            BOI Promotion for Electronic Design
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">March 17, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            Electronic design for microelectronics, optoelectronics, or embedded systems is promoted
+                            under activity 4.1. This post details the conditions for incentives...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Doing Business in Thailand, Thailand BOI</div>
+                    </article>
+
+                    <article>
+                        <h3 class="text-2xl font-semibold text-primary mb-2 hover:underline cursor-pointer">
+                            BOI Promotion for Manufacture of Biochemical
+                        </h3>
+                        <div class="text-sm text-gray-500 mb-4">March 11, 2025 &middot; Thai Lawyers</div>
+                        <p class="text-gray-700 mb-2">
+                            This category includes biochemical production using biomass or agricultural byproducts. BOI
+                            outlines specific input percentage requirements for eligibility...
+                        </p>
+                        <div class="text-sm text-orange-600">Categories: Doing Business in Thailand</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="w-full mx-auto p-6 bg-white shadow-md">
+            <h2 class="text-2xl font-bold text-primary mb-4">Disclaimer</h2>
+
+            <p>ThaiLawyers.com strongly recommends that you obtain proper professional consultation before making any
+                decisions based on the information provided on the pages on ThaiLawyers.com.
+
+                ThaiLawyers.com has made every effort to ensure that the information provided in good faith on the
+                website is
+                correct. However, we guarantee neither the accuracy nor completeness of any information and are not
+                responsible for any errors or omissions, or for the results obtained by others as a result of reliance
+                upon
+                such information. We disclaim any responsibility or liability for any loss whatsoever arising from its
+                use.
+
+            </p>
+            <br>
+            <hr class="max-w-7xl mx-auto">
+
+        </section>
+
+    </main>
+    <footer class="bg-white">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+      <!-- Column 1: Contact Info -->
+      <div class="space-y-4 text-gray-700">
+        <h2 class="text-lg font-semibold">Contact Us</h2>
+        <div class="flex items-start gap-3">
+          <img src="assets/images/pin.png" alt="Map Pin" class="w-5 h-5 mt-1" />
+          <p class="text-sm text-gray-700 leading-relaxed">
+            65/62 Chamnan Phenjati Business Center Building,<br />
+            6th Floor, Rama 9 Road, Huaykwang,<br />
+            Bangkok 10310, Thailand
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">&nbsp;</h2>
+
+        <div class="flex items-center gap-3">
+          <img src="assets/images/phone.png" alt="Phone" class="w-5 h-5 mt-1" />
+          <p class="text-sm text-gray-700">
+            <a href="tel:+6626432124" class="hover:underline hover:text-blue-600 transition">+662-643-2124</a>,
+            <a href="tel:+6626432403" class="hover:underline hover:text-blue-600 transition">+662-643-2403</a>
+          </p>
+
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="assets/images/email.png" alt="Email" class="w-5 h-5 mt-1" />
+          <p class="text-sm text-gray-700">
+            <a href="mailto:Info@ThaiLawyers.com" class="hover:underline hover:text-blue-600 transition">
+              Info@ThaiLawyers.com
+            </a>
+          </p>
+
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://www.facebook.com/ThaiLawyersLtd/">
+            <img src="assets/images/facebook.png" alt="Email" class="w-5 h-5 mt-1" />
+          </a>
+          <a href="https://x.com/LawyersofThai/">
+            <img src="assets/images/twitter.png" alt="Email" class="w-5 h-5 mt-1" />
+          </a>
+          <a href="https://www.linkedin.com/company/thai-lawyers-ltd-?trk=biz-companies-cym/">
+            <img src="assets/images/linkedin.png" alt="Email" class="w-5 h-5 mt-1" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="p-4">
+        <h2 class="text-primary font-semibold">Thai Lawyers Ltd.</h2>
+        Assisting foreign companies to establish and succeed in Thailand. Expert services in BOI company registration,
+        work permits, legal consulting, and more.
+      </div>
+    </div>
+
+    <div class="bg-[#da7509] text-white py-4">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-center text-sm">© Copyrights © 2025. Thai Lawyers All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

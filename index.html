@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thailand Lawyers - Assisting foreign companies - Thai Lawyers LtdThai Lawyers Ltd | Thailand BOI Company
+    Registration, representative office, branch office, Thai company, foreign business in Thailand by English speaking
+    Bangkok Lawyers.</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-vlL7zkRv4k8lYX0+lmClmguqK50K+ZDhfPOcB37y+WDvD3bgKqfq7hNf3O+MZyl5I2IB7Rt3D8IKKvQ5uA5zKg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://thailawyers.com/wp-content/themes/thailawyers/favicon/favicon-16x16.png">
+  <style>
+    /* Custom primary color */
+    :root {
+      --primary-color: #da7509;
+    }
+
+    .text-primary {
+      color: var(--primary-color);
+    }
+
+    .hover-text-primary:hover {
+      color: var(--primary-color);
+    }
+
+    /* Smooth rotation for arrow */
+    button svg {
+      transition: transform 0.3s ease;
+    }
+
+    button:focus {
+      outline-offset: 3px;
+      outline-color: var(--primary-color);
+    }
+
+    /* Services dropdown */
+    .services-dropdown {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 40;
+      transform: translateY(0);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .services-dropdown.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .swiper-slide {
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-items: center;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--primary-color);
+    }
+  </style>
+
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 bg-white backdrop-blur-md bg-opacity-90 shadow-sm z-50" role="banner">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex flex-col md:flex-row items-center justify-between">
+
+      <!-- Top Row: Mobile (company name + menu icon) | Desktop (full info) -->
+      <div
+        class="w-full md:w-auto flex items-center justify-between md:justify-start space-y-0 md:space-y-0 md:space-x-8 text-gray-700 text-sm md:text-base font-semibold">
+
+        <!-- Company Name (Always Visible) -->
+        <span class="text-primary text-lg md:text-xl font-extrabold"><a href="index.html" class="">Thai Lawyers
+            Ltd.</a></span>
+
+        <!-- Contact Info (Only on md and up) -->
+        <div class="hidden md:flex space-x-8 ml-8">
+          <a href="mailto:Info@ThaiLawyers.com" class="hover-text-primary transition-colors">Info@ThaiLawyers.com</a>
+          <a href="tel:+6626432403" class="hover-text-primary transition-colors">+662-643-2403</a>
+        </div>
+
+        <!-- Mobile menu toggle (Only on mobile) -->
+        <button id="menu-toggle" class="md:hidden text-gray-700 ml-auto" aria-label="Toggle Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation links -->
+      <nav id="mobile-menu" class="w-full md:w-auto mt-3 md:mt-0 hidden md:block" role="navigation"
+        aria-label="Primary Navigation">
+        <ul
+          class="flex flex-col md:flex-row md:flex-wrap justify-center gap-2 md:gap-x-8 text-gray-800 font-medium text-sm md:text-base">
+          <li><a href="about.html" class="hover-text-primary transition-colors block px-2 py-1">About Us</a></li>
+          <li><a href="contact.html" class="hover-text-primary transition-colors block px-2 py-1">Contact Us</a></li>
+          <li><a href="services.html" class="hover-text-primary transition-colors block px-2 py-1">Services</a></li>
+          <li><a href="blog.html" class="hover-text-primary transition-colors block px-2 py-1">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-full text-gray-800">
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-[600px] mx-auto mt-4 flex items-center overflow-hidden max-w-7xl bg-white rounded-2xl"
+      aria-label="Hero section">
+      <!-- Background image - truly full width -->
+      <div class="absolute inset-0 w-full h-full">
+        <img src="assets/images/hero-landing.png" alt="Thai Lawyers Background" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <!-- Slightly darker overlay for better text readability -->
+      </div>
+
+      <!-- Content overlay - now directly on the background -->
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-6 py-16">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            Thai Lawyers Ltd.
+          </h1>
+
+          <p class="text-gray-100 text-lg md:text-xl mb-6 leading-relaxed">
+            Assisting foreign companies to establish and succeed in Thailand. Expert services in BOI company
+            registration, work permits, legal consulting, and more.
+          </p>
+
+          <div class="flex flex-col sm:flex-row sm:items-center gap-6 mt-4">
+            <a href="#contact"
+              class="inline-block bg-[#b35e07] hover:bg-[#b35e07] text-white font-semibold py-3 px-8 rounded-lg transition text-center">
+              Contact Us
+            </a>
+
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              <span class="text-white font-medium">
+                Call now: <a href="tel:+6626432403" class="text-primary hover:underline font-semibold">+662-643-2403</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="w-full bg-white py-12 px-4 mt-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-primary mb-12 text-center">Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+          <!-- Service Item -->
+          <div
+            class="group p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-gray-300 transition">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-300 text-green-600 mb-4">
+              <img src="assets/images/registration.png" alt="">
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Thailand BOI Company Registration</h3>
+          </div>
+
+          <!-- Service Item -->
+          <div
+            class="group p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-gray-300 transition">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-300 text-green-600 mb-4">
+              <img src="assets/images/representative.png" alt="">
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Representative Office Setup</h3>
+          </div>
+
+          <!-- Service Item -->
+          <div
+            class="group p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-gray-300 transition">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-300 text-green-600 mb-4">
+              <img src="assets/images/treaty.png" alt="">
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Treaty of Amity Company Registration</h3>
+          </div>
+
+          <!-- Service Item -->
+          <div
+            class="group p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-gray-300 transition">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-300 text-green-600 mb-4">
+              <img src="assets/images/legal-due.png" alt="">
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Legal Due Diligence Service</h3>
+          </div>
+
+          <!-- Service Item -->
+          <div
+            class="group p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-gray-300 transition">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-300 text-green-600 mb-4">
+              <img src="assets/images/taxes.png" alt="">
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Tax & Labour Law Consulting</h3>
+          </div>
+
+          <!-- Service Item -->
+          <div
+            class="group p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-gray-300 transition">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-300 text-green-600 mb-4">
+              <img src="assets/images/litigation.png" alt="">
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Litigation Service</h3>
+          </div>
+
+          <!-- Service Item -->
+          <div
+            class="group p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-gray-300 transition">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-300 text-green-600 mb-4">
+              <img src="assets/images/permit.png" alt="">
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Work Permits</h3>
+          </div>
+
+          <!-- Service Item -->
+          <div
+            class="group p-6 bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md hover:border-gray-300 transition">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-yellow-300 text-green-600 mb-4">
+              <img src="assets/images/trademarks.png" alt="">
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">Trademark Registration</h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="max-w-7xl mx-auto p-6 bg-white rounded-lg shadow-md my-12" aria-label="Frequently Asked Questions">
+      <h2 class="text-3xl font-bold text-primary mb-8 text-center">Frequently Asked Questions</h2>
+
+      <div class="space-y-4">
+        <!-- FAQ Item Template -->
+        <div class="border border-gray-300 rounded" role="region" aria-labelledby="faq1-heading">
+          <button id="faq1-heading"
+            class="w-full px-4 py-3 text-left font-semibold text-gray-800 hover-text-primary focus:outline-none flex justify-between items-center"
+            aria-expanded="false" aria-controls="faq1-content" type="button">
+            <span>Is it possible for foreigners to fully own a company in Thailand?</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="faq1-content" class="px-4 py-3 text-gray-700 hidden" role="region" aria-labelledby="faq1-heading">
+            Yes, foreigners can own 100% of a company in Thailand depending on whether it is allowed by the Foreign
+            Business Law. International investors may also establish branch offices or Treaty of Amity companies
+            (specifically for American citizens) under certain regulations.
+          </div>
+        </div>
+
+        <div class="border border-gray-300 rounded" role="region" aria-labelledby="faq2-heading">
+          <button id="faq2-heading"
+            class="w-full px-4 py-3 text-left font-semibold text-gray-800 hover-text-primary focus:outline-none flex justify-between items-center"
+            aria-expanded="false" aria-controls="faq2-content" type="button">
+            <span>What is a representative office, and when is it needed?</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="faq2-content" class="px-4 py-3 text-gray-700 hidden" role="region" aria-labelledby="faq2-heading">
+            A representative office is suitable if your establishment in Thailand is not for earning income but for
+            activities like reporting business movements, providing advice about goods, inspecting quality and quantity
+            of goods, or disseminating information related to the head office or affiliated companies.
+          </div>
+        </div>
+
+        <div class="border border-gray-300 rounded" role="region" aria-labelledby="faq3-heading">
+          <button id="faq3-heading"
+            class="w-full px-4 py-3 text-left font-semibold text-gray-800 hover-text-primary focus:outline-none flex justify-between items-center"
+            aria-expanded="false" aria-controls="faq3-content" type="button">
+            <span>Why is BOI promotion considered the best form of doing business in Thailand?</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="faq3-content" class="px-4 py-3 text-gray-700 hidden" role="region" aria-labelledby="faq3-heading">
+            BOI (Board of Investment) promotion is favored because most BOI-promoted companies can be 100% foreign-owned
+            and are allowed more work permits than non-BOI companies. This provides significant business advantages in
+            Thailand.
+          </div>
+        </div>
+
+        <div class="border border-gray-300 rounded" role="region" aria-labelledby="faq4-heading">
+          <button id="faq4-heading"
+            class="w-full px-4 py-3 text-left font-semibold text-gray-800 hover-text-primary focus:outline-none flex justify-between items-center"
+            aria-expanded="false" aria-controls="faq4-content" type="button">
+            <span>Why can Thailand BOI company registration be complicated?</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="faq4-content" class="px-4 py-3 text-gray-700 hidden" role="region" aria-labelledby="faq4-heading">
+            Many unfamiliar with Thai laws find the BOI registration process complicated. Some law firms charge high
+            fees, but issues often arise involving financial, accounting, and tax matters, which lawyers alone may not
+            cover. ThaiLawyers.com collaborates with experienced Thai certified accountants to ensure your business
+            starts correctly.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="max-w-7xl mx-auto">
+      <div class="min-h-screen flex items-center justify-center bg-gray-50 ">
+        <div class="w-full max-w-7xl bg-white rounded-2xl shadow-lg p-0 md:flex overflow-hidden">
+
+          <!-- Form Section -->
+          <div class="w-full md:w-1/2 p-8">
+            <h2 class="text-2xl font-semibold text-primary mb-6 text-center">Contact Us</h2>
+            <form class="space-y-5">
+              <div>
+                <label class="block text-gray-700 mb-1 font-medium">Name</label>
+                <input type="text" placeholder="Your Name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400" />
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-1 font-medium">Email</label>
+                <input type="email" placeholder="your@email.com"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400" />
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-1 font-medium">Phone</label>
+                <input type="tel" placeholder="+1234567890"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400" />
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-1 font-medium">Comments</label>
+                <textarea rows="4" placeholder="Write your message..."
+                  class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="px-6 py-2 text-white rounded-xl shadow-md hover:opacity-90 transition-all"
+                  style="background-color: #da7509;">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Image Section -->
+          <div class="hidden md:block md:w-1/2">
+            <img src="assets/images/contact-form.jpg" alt="Contact Illustration" class="h-full w-full">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto bg-white rounded-lg shadow-md my-12">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7750.754469134248!2d100.568561!3d13.75611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29e8cb019af2d%3A0xca114ed0832ca072!2sThai%20Lawyers%20Ltd.!5e0!3m2!1sen!2sus!4v1747475633387!5m2!1sen!2sus"
+        width="100%" height="450" style="border:0;" class="rounded-2xl" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="max-full bg-white">
+      <h2 class="text-3xl font-bold text-primary pt-4 text-center">Testimonials</h2>
+      <!-- Swiper -->
+      <div class="relative">
+        <!-- Top Pagination Dots -->
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide p-12 shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed">
+                Looking for a consultant company to help you go through the BOI process can be a long search. For us it
+                took several meetings with a few, mostly ones run by foreigners residing in Thailand because we were
+                worried about the language barrier. However while their English was great, none of them felt right and
+                they were all very expensive. At that point we decided to try a local Thai firm, we checked Thai Lawyers
+                Ltd. of MSNA Group located in Bangkok and we never looked back.
+                <br>
+                The BOI application is based on a plan, this plan is more than just a simple business plan, it is a
+                complex combination of cross details that cover all facets of your business, and if not filled out
+                correctly and smartly, not only will the BOI will reject it, but it can also lead you to costly
+                obstacles with any future expansion of your planned operation in Thailand.
+                <br>
+                We got our BOI approved first draft in less than 40 days, very impressive indeed.
+                The staff at MSNA are professional, they all speak fluent English, it’s a modern office and is a
+                pleasure to work with. If you read these lines then you got to the right place, we highly recommend
+                using their service.
+                <br>
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— Gur M, CEO, Powerlines LLC</div>
+            </div>
+
+            <div class="swiper-slide bg-white p-12 shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed">
+
+                We have engaged Thai Lawyers of MSNA Group to help facilitate our BOI application process and we are
+                very satisfied with their services. They are able to deliver whatever they have promised to deliver and
+                they are well versed with the BOI requirements.
+                <br>
+                As Thailand is a country which predominantly uses the Thai language, we are pleased with MSNA’s ability
+                to be bilingual, allowing us to communicate effectively with them in English, and for all documents and
+                communication with the BOI to be done in Thai. There is no language barrier which we need to overcome
+                before even being able to start our BOI application process.
+                <br>
+                We definitely recommend MSNA’s services.
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— Alvin Ho, Chief Business Officer, Macromac
+                Group</div>
+            </div>
+
+
+            <div class="swiper-slide bg-white p-12 shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed">
+                I found them to be very professional and easy to work with. Guided me exactly through the process of
+                what to do in order for me to get my BOI License and Certificate. Would recommend them and their rates
+                are reasonable and within the market what offers. Also have english speaking employees to assist and
+                talk with which helps.
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— Jason Ho, Chief Software Architect, S1K
+              </div>
+            </div>
+
+            <div class="swiper-slide bg-white p-12 shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed">
+                Very professional firm with a great management. They are always proactive and respond to even smallest
+                inquiries. Had only positive experience with this company. A+++
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— Alex Lane, Managing Director, Amilabs Ltd.
+              </div>
+            </div>
+
+            <div class="swiper-slide bg-white p-12 shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed">
+                Thai Lawyers have been a huge help in setting up a BOI promoted business in Thailand. They have always
+                been there to provide support and advice when needed.
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— Rob Wavre, Managing Director, RAW Develop
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-12 shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed">
+                We engaged MSNA Group to assist our company for the BOI opening of the operation interview/inspection.
+                As always, it was a pleasure working with MSNA as you know you can rely on their professionalism,
+                knowledge of the processes and deep experience in dealing with Thai officials to achieve the expected
+                results. Before the interview MSNA handled the preparation of the necessary documents and helped to
+                train our staff in dealing with the BOI officials for this occasion. A senior manager of MSNA attended
+                the interview and helped to ensure the meeting run smoothly. Following the interview she followed up
+                with the BOI to complete the required documentation. We have now obtained the BOI opening certificate
+                and are very pleased with MSNA’ s contribution that ensured the objective was met in full in a pain-free
+                way.
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— David Lambert, Managing Director, AD System
+                Asia Co., Ltd.
+              </div>
+            </div>
+
+            <div class="swiper-slide bg-white p-12 shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed">
+                After working with Thai Lawyers Ltd of MSNA Group, I am glad that Ms.Stewart and her team assisted us in
+                pushing forward our BOI application and taking the time to explain the fine points of Thai law. When
+                issues arose, they diligently took responsibility for it. I recommend her firm as being well qualified
+                and with good availability to sort critical issues out.
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— CEO, ReDNA Labs
+              </div>
+            </div>
+
+            <div class="swiper-slide bg-white p-12  shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed">
+                Engaging Thai Lawyers Ltd to assist us in obtaining the foreign business license for our Thailand Branch
+                Office is probably one of the best decisions we have made, especially after encountering impasse with a
+                less effective law firm which impinged on our Thailand operation setup, and wasted much of our precious
+                time.
+                <br>
+                Like in anywhere else, working with the local authorities is usually quite a bureaucratic process and
+                tedious as well, this is exacerbated if the engaged Law firm does not know exactly how to handle it
+                appropriately and effectively. Thai Lawyers Ltd. has a competent team who is responsive and thorough,
+                this makes them very effective in handling the case within a short time frame. And you can have a peace
+                of mind leaving the important task to them.
+                <br>
+                I would highly recommend Thai Lawyers Ltd. to anyone who wishes to engage a local law firm to work on
+                their new establishment with the local authorities in Thailand. They certainly know and understand the
+                local business culture well and are able to get things done effectively and timely.
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— David Lum, Director, MULTIVAC PTE LTD.
+              </div>
+            </div>
+            <div class="swiper-slide bg-white p-6 shadow-md">
+              <p class="text-gray-700 mb-4 italic leading-relaxed px-4">
+                We hired Thai Lawyers Ltd. of MSNA Group to help us get the foreign business license for our
+                Representative office in Thailand. The team at Thai Lawyers Ltd. are very knowledgeable of the whole
+                process and very responsive to both our questions and the demands from the foreign business authority.
+                Their promptness and attention to details are impressive. We can recommend Thai Lawyers Ltd to anyone
+                wishing to start their business in Thailand because we have experienced their competence and prudent
+                advisory and their fees are very reasonable.
+              </p>
+              <div class="text-sm font-semibold text-gray-900 text-right">— Daniel Loh, General Manager (South East
+                Asia),
+                TLV Pte Ltd.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mb-6 flex justify-center"></div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-prev w-6 h-6 text-gray-600 hover:text-black"></div>
+        <div class="swiper-button-next w-6 h-6 text-gray-600 hover:text-black"></div>
+      </div>
+      </div>
+      <hr class="max-w-7xl mx-auto">
+    </section>
+    <section class="w-full mx-auto p-6 bg-white shadow-md">
+      <h2 class="text-2xl font-bold text-primary mb-4">Disclaimer</h2>
+
+      <p>ThaiLawyers.com strongly recommends that you obtain proper professional consultation before making any
+        decisions based on the information provided on the pages on ThaiLawyers.com.
+
+        ThaiLawyers.com has made every effort to ensure that the information provided in good faith on the website is
+        correct. However, we guarantee neither the accuracy nor completeness of any information and are not
+        responsible for any errors or omissions, or for the results obtained by others as a result of reliance upon
+        such information. We disclaim any responsibility or liability for any loss whatsoever arising from its use.
+
+      </p>
+      <br>
+      <hr class="max-w-7xl mx-auto">
+
+    </section>
+  </main>
+  <footer class="bg-white">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+      <!-- Column 1: Contact Info -->
+      <div class="space-y-4 text-gray-700">
+        <h2 class="text-lg font-semibold">Contact Us</h2>
+        <div class="flex items-start gap-3">
+          <img src="assets/images/pin.png" alt="Map Pin" class="w-5 h-5 mt-1" />
+          <p class="text-sm text-gray-700 leading-relaxed">
+            65/62 Chamnan Phenjati Business Center Building,<br />
+            6th Floor, Rama 9 Road, Huaykwang,<br />
+            Bangkok 10310, Thailand
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="p-4">
+        <h2 class="text-lg font-semibold">&nbsp;</h2>
+
+        <div class="flex items-center gap-3">
+          <img src="assets/images/phone.png" alt="Phone" class="w-5 h-5 mt-1" />
+          <p class="text-sm text-gray-700">
+            <a href="tel:+6626432124" class="hover:underline hover:text-blue-600 transition">+662-643-2124</a>,
+            <a href="tel:+6626432403" class="hover:underline hover:text-blue-600 transition">+662-643-2403</a>
+          </p>
+
+        </div>
+        <div class="flex items-center gap-3">
+          <img src="assets/images/email.png" alt="Email" class="w-5 h-5 mt-1" />
+          <p class="text-sm text-gray-700">
+            <a href="mailto:Info@ThaiLawyers.com" class="hover:underline hover:text-blue-600 transition">
+              Info@ThaiLawyers.com
+            </a>
+          </p>
+
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://www.facebook.com/ThaiLawyersLtd/">
+            <img src="assets/images/facebook.png" alt="Email" class="w-5 h-5 mt-1" />
+          </a>
+          <a href="https://x.com/LawyersofThai/">
+            <img src="assets/images/twitter.png" alt="Email" class="w-5 h-5 mt-1" />
+          </a>
+          <a href="https://www.linkedin.com/company/thai-lawyers-ltd-?trk=biz-companies-cym/">
+            <img src="assets/images/linkedin.png" alt="Email" class="w-5 h-5 mt-1" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="p-4">
+        <h2 class="text-primary font-semibold">Thai Lawyers Ltd.</h2>
+        Assisting foreign companies to establish and succeed in Thailand. Expert services in BOI company registration,
+        work permits, legal consulting, and more.
+      </div>
+    </div>
+
+    <div class="bg-[#da7509] text-white py-4">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-center text-sm">© Copyrights © 2025. Thai Lawyers All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    // FAQ toggle functionality
+    document.querySelectorAll('section button').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+
+        const content = button.nextElementSibling;
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+          button.querySelector('svg').classList.add('rotate-180');
+        } else {
+          content.classList.add('hidden');
+          button.querySelector('svg').classList.remove('rotate-180');
+        }
+      });
+    });
+
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 1000000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      spaceBetween: 20,
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        1024: { slidesPerView: 1 },
+      },
+    });
+  </script>
+
+</body>
+
+</html>
